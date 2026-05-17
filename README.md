@@ -17,6 +17,11 @@ This repository contains the official implementation of **SLITE**, a hybrid, int
 
 SLITE operates by extracting **17 handcrafted features** structured into two complementary analytical dimensions from the Premise ($P$) and the Hypothesis ($H$):
 
+<p align="center">
+  <img src="images/Ml-Me-fig.png" alt="" width="400">
+  <img src="images/Entities-Align.png" alt="" width="400">
+</p>
+
 ### 1. Structural-Relational Layer (E-Features)
 Using syntactic dependency parsing via *spaCy*, the model decomposes sentences into core compositional entities (nouns and verbs) and their modifiers (adjectives, adverbs). Elements in $H$ are mapped and classified into four mutually exclusive semantic groups relative to $P$ using the ConceptNet ontology:
 * **Equivalence/Generality ($\mathcal{G}_{eq}$):** Synonyms and hypernyms.
