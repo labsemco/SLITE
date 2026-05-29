@@ -45,8 +45,8 @@ SLITE was evaluated on the standard **SICK** (Sentences Involving Compositional 
 | Model | SICK (3-Class) | SICK-CE (Binary) | Model Type |
 | :--- | :---: | :---: | :--- |
 | **SLITE** (Logistic Regression) | **83.0%** | **96.0%** | Hybrid / Intrinsically Interpretable |
-| IsoLex (Souza & Lopes, 2025) | 79.0% | 92.0% | SVO-Based Hybrid / WordNet |
-| RoBERTa (SOTA Opaque) | ~85.0% | 98.0% | Deep Neural Network / Black-Box |
+| IsoLex (Souza & Lopes, 2025) |      | 92.0% | SVO-Based Hybrid / WordNet |
+| RoBERTa (SOTA Opaque) | ~86.0% | 98.0% | Deep Neural Network / Black-Box |
 
 ### Explainability Insights (SHAP Analysis)
 * **Classification Drivers:** Global SHAP values confirm that **Structural-Relational (E-Features)** dominate overall classification decisions.
@@ -55,14 +55,32 @@ SLITE was evaluated on the standard **SICK** (Sentences Involving Compositional 
 
 ---
 
-## 🛠️ Requirements
+## 🛠️ Requirements & Tools
 
-* Python 3.8+
+* Python 3.12+ (conda create --name rit python=3.12)
+* pip install -r requirements.txt
 * spaCy (`en_core_web_md` model)
-* ConceptNet Numberbatch Embeddings
+* ConceptNet Numberbatch Embeddings (https://github.com/commonsense/conceptnet-numberbatch)
 * Scikit-Learn
 * SHAP
 
+
+## 📂 Repository Structure
+
+A quick overview of how the key files and directories are organized:
+
+```text
+├── data/                 # Additional tools
+│   ├── CURING_SICK     # Input Data
+│   ├── numberbatch-en-17.04b.txt     # Main data
+│   ├── Relaciones_generales.pickle     # Main data
+│   └── Relaciones_especificas.pickle          # Auxiliary BD 
+├── output                 # Outputs
+│   └── relatonships/*     # Folders corpus
+├── CURING_SICK            # Files SICK (https://github.com/huhailinguist/curing-SICK)
+├── Relaciones_TH_RL.py            # Main execution script
+├── .gitignore            # Files excluded from Git tracking
+└── requirements.txt      # Project dependencies (pip install -r requirements.txt)
 ---
 
 ## ✒️ Citation / Authors
