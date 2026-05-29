@@ -81,7 +81,8 @@ A quick overview of how the key files and directories are organized:
 ├── Relaciones_TH_RL.py            # Main execution script
 ├── .gitignore            # Files excluded from Git tracking
 └── requirements.txt      # Project dependencies (pip install -r requirements.txt)
----
+```
+
 
 ## ✒️ Citation / Authors
 
